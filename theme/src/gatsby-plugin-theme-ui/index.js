@@ -8,12 +8,13 @@ export default {
     text: "#232129",
     background: "#fff",
     primary: "#639",
+    gray: ["#eee", "#aaa", "#555" ],
   },
   fonts: {
     default:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   },
-  fontSizes: [16, 18, 20, 22, 27, 36],
+  fontSizes: [16, 18, 20, 22, 27, 36, 64, 80],
   lineHeights: {
     text: "1.45",
     heading: "1.1",
@@ -23,40 +24,50 @@ export default {
   },
   styles: {
     Layout: {
-      backgroundColor: "background",
-      color: "text",
+      //backgroundColor: "text",
+      background: "linear-gradient(to right, #134e5e, #71b280);",
+      //background: "url(https://i.stack.imgur.com/UJur5.png)",
+      //backgroundSize: "cover",
+      color: "background",
       fontFamily: "default",
       fontSize: 1,
       lineHeight: "text",
+      padding: [3, 3, 0],
     },
     Header: {
-      backgroundColor: "primary",
-      color: "background",
-      fontWeight: "bold",
-      margin: 0,
-      span: {
-        display: "block",
-        fontSize: 3,
-        margin: "0 auto",
-        maxWidth: "container",
-        padding: 3,
-        width: "90vw",
+      fontSize: 4,
+      mt: [5, 7, 7],
+      mb: [1, 1, 4],
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "flex-end",
+      textAlign: "center",
+      "& > p": {
+        margin: 0,
       },
     },
     Main: {
-      margin: "0 auto",
-      maxWidth: "container",
-      width: "90vw",
+      flex: 1,
+      display: "flex"
     },
     Container: {
       padding: 0,
-      paddingBottom: 3,
-      paddingTop: 3,
+      my: 'auto',
+      width: 'auto',
+    },
+    Footer: {
+      display: "flex",
+      justifyContent: "center",
+      textAlign: "center",
+      mb: [5, 7, 7],
+      mt: [1, 1, 4],
     },
     h1: {
-      color: "text",
-      fontSize: 5,
+      color: "background",
+      fontSize: [3, 4, 5],
       lineHeight: "heading",
+      margin: 0,
+      maxWidth: ["100%", "80vw", "80vw"]
     },
   },
 }
