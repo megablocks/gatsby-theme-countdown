@@ -41,7 +41,7 @@ const CountdownContainer = ({
       }
     })}>
       {showDays && <CountNumber 
-        value={isOver ? 0 : remainingDays}
+        value={addPadding(isOver ? 0 : remainingDays)}
         label={daysLabel}
       />}
       {showHours && <CountNumber 

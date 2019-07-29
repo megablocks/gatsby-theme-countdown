@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from 'theme-ui'
 import GitHubLogo from '../../assets/github-logo.svg';
-import theme from '../gatsby-plugin-theme-ui/index';
 
 const GithubLink = ({url}) => (
   <div css={css({
@@ -15,7 +14,7 @@ const GithubLink = ({url}) => (
     "& svg": {
       width: [24, 30],
       height: [24, 30],
-      fill: theme.colors.primary,
+      variant: 'svg',
       marginRight: 2,
       "& :hover": {
         opacity: "0.5",
