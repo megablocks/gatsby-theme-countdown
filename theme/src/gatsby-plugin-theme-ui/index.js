@@ -3,11 +3,15 @@
  * @see https://theme-ui.com/
  * @see https://theme-ui.com/gatsby-plugin/
  */
+
+// Defining the primary color outside so we can reference it later in the svg
+const PRIMARY_COLOR = "#4682b4";
+
 export default {
   colors: {
     text: "#fff",
     background: "#232129",
-    primary: "#4682b4",
+    primary: PRIMARY_COLOR,
     border: "#ccc",
   },
   fonts: {
@@ -75,4 +79,7 @@ export default {
       maxWidth: ["90vw", "80vw", "800px"],
     },
   },
+  svg: {
+    fill: PRIMARY_COLOR
+  }
 }

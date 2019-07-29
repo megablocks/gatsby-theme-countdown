@@ -5,7 +5,6 @@ import {
   WhatsappShareButton, WhatsappIcon,
   FacebookShareButton, FacebookIcon,
 } from 'react-share';
-import theme from '../gatsby-plugin-theme-ui/index';
 import config from '../configs/share-buttons';
 
 const URL = window.location.href;
@@ -30,7 +29,7 @@ const ShareButtons = ({
       fill: "transparent"
     },
     "& svg path": {
-      fill: theme.colors.primary,
+      variant: 'svg',
     }
   })}>
     {showWhatsappShareButton && <WhatsappShareButton 
