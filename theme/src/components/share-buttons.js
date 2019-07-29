@@ -1,23 +1,56 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { css, Flex } from "theme-ui"
-//import GitHubLogo from '../../assets/github-logo.svg';
+import { jsx, css, Flex } from 'theme-ui'
+import { 
+  TwitterShareButton, TwitterIcon,
+  WhatsappShareButton, WhatsappIcon,
+  FacebookShareButton, FacebookIcon,
+} from 'react-share';
+import theme from '../gatsby-plugin-theme-ui/index';
+import config from '../configs/share-buttons';
 
-const ShareButtons = () => (
-  <div css={css({
-    position: 'absolute',
-    top: "20px",
-    right: "20px",
-    "& > img": {
-      width: 48,
+const URL = window.location.href;
+
+const ShareButtons = ({ 
+  title, 
+  showFacebookShareButton, 
+  showTwitterShareButton, 
+  showWhatsappShareButton 
+}) => (
+  <Flex css={css({
+    flex: 1,
+    my: 3,
+    "& > *": {
       height: 48,
-      color: "white",
-      fill: "red",
-      filter: "invert(1)"
+      cursor: "pointer",
+    },
+    "& > *:not(:last-child)": {
+      mr: 3
+    },
+    "& svg circle:first-of-type": {
+      fill: "transparent"
+    },
+    "& svg path": {
+      fill: theme.colors.primary,
     }
   })}>
-    {/*<GitHubLogo />*/}
-  </div>
+    {showWhatsappShareButton && <WhatsappShareButton 
+      url={URL} 
+      title={title} 
+      {...config.whatsapp}>
+      <WhatsappIcon size={48} round />
+    </WhatsappShareButton>}
+    {showTwitterShareButton && <TwitterShareButton 
+      url={URL} 
+      title={title} 
+      {...config.twitter}>
+      <TwitterIcon size={48} round />
+    </TwitterShareButton>}
+    {showFacebookShareButton && <FacebookShareButton 
+      url={URL}
+      {...config.facebook}>
+      <FacebookIcon size={48} round />
+    </FacebookShareButton>}
+  </Flex>
 );
 
 export default ShareButtons;

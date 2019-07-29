@@ -5,16 +5,16 @@
  */
 export default {
   colors: {
-    text: "#232129",
-    background: "#fff",
-    primary: "#639",
-    gray: ["#eee", "#aaa", "#555" ],
+    text: "#fff",
+    background: "#232129",
+    primary: "#4682b4",
+    border: "#ccc",
   },
   fonts: {
     default:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   },
-  fontSizes: [16, 18, 20, 22, 27, 36, 64, 80],
+  fontSizes: [14, 16, 18, 20, 22, 27, 36, 64, 80],
   lineHeights: {
     text: "1.45",
     heading: "1.1",
@@ -24,27 +24,26 @@ export default {
   },
   styles: {
     Layout: {
-      //backgroundColor: "text",
-      background: "linear-gradient(to right, #134e5e, #71b280);",
+      backgroundColor: "background",
+      //background: "linear-gradient(to right, #134e5e, #71b280);",
       //background: "url(https://i.stack.imgur.com/UJur5.png)",
       //backgroundSize: "cover",
-      color: "background",
+      color: "text",
       fontFamily: "default",
-      fontSize: 1,
+      fontSize: 2,
       lineHeight: "text",
-      padding: [3, 3, 0],
+      padding: 0,
+      overflowY: "auto",
     },
     Header: {
-      fontSize: 4,
-      mt: [5, 7, 7],
-      mb: [1, 1, 4],
+      fontSize: 5,
+      height: ["20vh", "20vh"],
       display: "flex",
       justifyContent: "center",
-      alignItems: "flex-end",
       textAlign: "center",
-      "& > p": {
-        margin: 0,
-      },
+      alignItems: "flex-end",
+      pt: 3,
+      pb: [3],
     },
     Main: {
       flex: 1,
@@ -57,17 +56,23 @@ export default {
     },
     Footer: {
       display: "flex",
-      justifyContent: "center",
-      textAlign: "center",
-      mb: [5, 7, 7],
-      mt: [1, 1, 4],
+      alignItems: "center",
+      flexDirection: "column",
+      pt: [3],
+      pb: 2,
+      height: "20vh",
     },
     h1: {
-      color: "background",
-      fontSize: [3, 4, 5],
+      fontSize: [4, 5, 6],
       lineHeight: "heading",
       margin: 0,
-      maxWidth: ["100%", "80vw", "80vw"]
+      maxWidth: ["60vw", "500px", "800px"]
+    },
+    h2: {
+      fontWeight: "normal",
+      fontSize: 2,
+      margin: 0,
+      maxWidth: ["90vw", "80vw", "800px"],
     },
   },
 }

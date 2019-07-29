@@ -5,6 +5,7 @@
     "type": "git",
     "url": "https://github.com/rafaelquintanilha/gatsby-theme-countdown.git"
   },
+  "homepage": "https://rafaelquintanilha.com",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -21,8 +22,15 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@mdx-js/react": "^1.0.21",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-theme-ui": "^0.2.2",
-    "theme-ui": "^0.2.2"
+    "moment": "^2.24.0",
+    "react-helmet": "^5.2.1",
+    "react-particles-js": "^2.7.0",
+    "react-share": "^3.0.0",
+    "theme-ui": "^0.2.2",
+    "use-clock": "^1.1.0"
   },
   "keywords": [
     "gatsby",

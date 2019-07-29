@@ -1,59 +1,106 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
-import { css, Flex } from "theme-ui"
-import Layout from "../components/layout"
+import React from "react"
+import { css, Global } from "@emotion/core"
+import { Layout as StyledLayout, Header, Main, Container, Footer } from "theme-ui"
+import { graphql, useStaticQuery } from "gatsby"
+import GithubLink from "../components/github-link";
+import ShareButtons from "../components/share-buttons";
+import Credits from "../components/credits";
+import Particles from '../components/particles';
+import MainHeader from "../components/main-header";
+import SecondaryHeader from "../components/secondary-header";
+import CountdownContainer from "../components/countdown-container";
+import SEO from "../components/seo";
 
-const PageTemplate = ({ pageContext }) => (
-  <Layout>
-    <Flex css={css({
-      border: "1px solid #eee",
-      borderColor: "gray.0",
-      flexDirection: ["column", "row", "row"],
-      "& > div": {
-        px: [2, 4, 5],
-        py: [2, 2, 0],
-        my: [1, 2, 4],
-        mx: [4, 0, 0],
-        borderRightWidth: [0, "1px", "1px"],
-        borderRightStyle: [0, "solid", "solid"],
-        borderBottomWidth: ["1px", 0, 0],
-        borderBottomStyle: ["solid", 0, 0],
-        borderColor: 'gray.0',
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        "& > div:first-of-type": {
-          fontSize: [6, 6, 7],
-          fontWeight: 'bold',
-          lineHeight: 1
-        },
-        "& > div:last-child": {
-          fontSize: [14, 14, 16],
-        }
-      },
-      "& > div:last-child": {
-        border: 0
+const Layout = () => {
+  const { 
+    site: {
+      siteMetadata: {
+        title,
+        text,
+        showGithubButton,
+        repoUrl,
+        targetDate,
+        showSeconds,
+        showMinutes,
+        showHours,
+        showDays,
+        showWhatsappShareButton,
+        showTwitterShareButton,
+        showFacebookShareButton,
+        showParticles,
       }
-    })}>
-      <div>
-        <div>169</div>
-        <div>Days</div>
-      </div>
-      <div>
-        <div>18</div>
-        <div>Hours</div>
-      </div>
-      <div>
-        <div>34</div>
-        <div>Minutes</div>
-      </div>
-      <div>
-        <div>11</div>
-        <div>Seconds</div>
-      </div>
-    </Flex>
-  </Layout>
-)
+    }
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          text {
+            mainHeader
+            secondaryHeader
+            daysLabel
+            hoursLabel
+            minutesLabel
+            secondsLabel
+          }
+          showGithubButton
+          repoUrl
+          targetDate
+          showSeconds
+          showMinutes
+          showHours
+          showDays
+          showWhatsappShareButton
+          showTwitterShareButton
+          showFacebookShareButton
+          showParticles
+        }
+      }
+    }
+  `);
 
-export default PageTemplate
+  return (
+    <StyledLayout>
+      <Global
+        styles={css`
+          body {
+            margin: 0;
+          }
+        `}
+      />
+      <SEO title={title} />
+      <Header>
+        {showGithubButton && <GithubLink url={repoUrl} />}
+        <MainHeader text={text.mainHeader} />
+      </Header>
+      <Main>
+        <Container>
+          <CountdownContainer 
+            targetDate={targetDate}
+            showDays={showDays}
+            showHours={showHours}
+            showMinutes={showMinutes}
+            showSeconds={showSeconds}
+            daysLabel={text.daysLabel}
+            hoursLabel={text.hoursLabel}
+            minutesLabel={text.minutesLabel}
+            secondsLabel={text.secondsLabel}
+          />
+        </Container>
+      </Main>
+      <Footer>
+        <SecondaryHeader text={text.secondaryHeader} />
+        <ShareButtons 
+          title={title}
+          showWhatsappShareButton={showWhatsappShareButton}
+          showTwitterShareButton={showTwitterShareButton}
+          showFacebookShareButton={showFacebookShareButton}
+        />
+        <Credits />
+      </Footer>
+      {showParticles && <Particles />}
+    </StyledLayout>
+  )
+}
+
+export default Layout

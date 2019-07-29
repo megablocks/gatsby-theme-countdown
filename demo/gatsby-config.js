@@ -5,5 +5,12 @@
  */
 
 module.exports = {
-  plugins: ["gatsby-theme-jam-example"],
+  plugins: [
+    {
+      resolve: "gatsby-theme-countdown",
+      options: {
+        basePath: "/",
+      }
+    }
+  ],
 }
