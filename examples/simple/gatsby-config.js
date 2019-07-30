@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    url: "https://gatsby-theme-countdown-simple-example.netlify.com"
+  },
   plugins: [
     {
       resolve: "@rafaelquintanilha/gatsby-theme-countdown",

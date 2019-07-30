@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Gatsby Theme Jam Countdown",
+    url: "https://gatsby-theme-countdown-theme-jam-example.netlify.com"
   },
   plugins: [
     {

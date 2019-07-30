@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "2022 FIFA World Cup Countdown",
+    url: "https://gatsby-theme-countdown-world-cup-example.netlify.com"
   },
   plugins: [
     {
