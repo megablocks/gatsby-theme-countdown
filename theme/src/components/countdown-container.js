@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css, Flex } from "theme-ui"
+import { jsx, css, Flex } from "theme-ui";
 import useClock from 'use-clock';
 import { remainingTime, addPadding } from '../utils/utils';
 import CountNumber from './count-number';

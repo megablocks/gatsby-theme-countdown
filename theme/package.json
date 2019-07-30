@@ -6,7 +6,7 @@
     "url": "https://github.com/rafaelquintanilha/gatsby-theme-countdown.git"
   },
   "homepage": "https://rafaelquintanilha.com",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {

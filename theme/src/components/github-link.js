@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from 'theme-ui'
+import { jsx, css } from 'theme-ui';
 import GitHubLogo from '../../assets/github-logo.svg';
 
 const GithubLink = ({url}) => (

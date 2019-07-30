@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css, Flex } from 'theme-ui'
+import { jsx, css, Flex } from 'theme-ui';
 import { 
   TwitterShareButton, TwitterIcon,
   WhatsappShareButton, WhatsappIcon,

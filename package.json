@@ -11,7 +11,9 @@
     "build:theme-jam": "yarn workspace theme-jam build",
     "dev:world-cup": "yarn workspace world-cup develop",
     "build:world-cup": "yarn workspace world-cup build",
-    "dev": "yarn workspace demo develop",
-    "build": "yarn workspace demo build"
+    "dev:simple": "yarn workspace simple develop",
+    "build:simple": "yarn workspace simple build",
+    "dev": "yarn workspace simple develop",
+    "build": "yarn workspace simple build"
   }
 }

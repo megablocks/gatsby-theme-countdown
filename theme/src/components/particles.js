@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import { Particles as ReactParticles } from 'react-particles-js';
-import params from '../configs/particles'
+import params from '../configs/particles';
 
 const Particles = () => (
   <ReactParticles 

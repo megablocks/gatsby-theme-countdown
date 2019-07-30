@@ -1,3 +1,4 @@
+// Based on https://vincentgarreau.com/particles.js/
 export default {
   "particles": {
     "number": {
