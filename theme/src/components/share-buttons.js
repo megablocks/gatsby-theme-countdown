@@ -11,9 +11,9 @@ const URL = typeof window !== "undefined" ? window.location.href : '';
 
 const ShareButtons = ({ 
   title, 
-  showFacebookShareButton, 
-  showTwitterShareButton, 
-  showWhatsappShareButton 
+  hideFacebookShareButton, 
+  hideTwitterShareButton, 
+  hideWhatsappShareButton 
 }) => (
   <Flex css={css({
     flex: 1,
@@ -32,19 +32,19 @@ const ShareButtons = ({
       variant: 'svg',
     }
   })}>
-    {showWhatsappShareButton && <WhatsappShareButton 
+    {!hideWhatsappShareButton && <WhatsappShareButton 
       url={URL} 
       title={title} 
       {...config.whatsapp}>
       <WhatsappIcon size={48} round />
     </WhatsappShareButton>}
-    {showTwitterShareButton && <TwitterShareButton 
+    {!hideTwitterShareButton && <TwitterShareButton 
       url={URL} 
       title={title} 
       {...config.twitter}>
       <TwitterIcon size={48} round />
     </TwitterShareButton>}
-    {showFacebookShareButton && <FacebookShareButton 
+    {!hideFacebookShareButton && <FacebookShareButton 
       url={URL}
       {...config.facebook}>
       <FacebookIcon size={48} round />

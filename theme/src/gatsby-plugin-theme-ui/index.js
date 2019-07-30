@@ -29,9 +29,6 @@ export default {
   styles: {
     Layout: {
       backgroundColor: "background",
-      //background: "linear-gradient(to right, #134e5e, #71b280);",
-      //background: "url(https://i.stack.imgur.com/UJur5.png)",
-      //backgroundSize: "cover",
       color: "text",
       fontFamily: "default",
       fontSize: 2,
@@ -41,7 +38,7 @@ export default {
     },
     Header: {
       fontSize: 5,
-      height: ["20vh", "20vh"],
+      height: "20vh",
       display: "flex",
       justifyContent: "center",
       textAlign: "center",

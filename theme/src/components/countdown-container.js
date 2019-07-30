@@ -6,10 +6,10 @@ import CountNumber from './count-number';
 
 const CountdownContainer = ({ 
   targetDate, 
-  showSeconds, 
-  showMinutes,
-  showHours,
-  showDays,
+  hideSeconds, 
+  hideMinutes,
+  hideHours,
+  hideDays,
   secondsLabel,
   minutesLabel,
   hoursLabel,
@@ -23,7 +23,6 @@ const CountdownContainer = ({
     remainingMinutes, 
     remainingSeconds 
   } = remainingTime(targetDate, currentDate);
-  console.log(remainingHours)
   return (
     <Flex css={css({
       borderWidth: "1px",
@@ -41,19 +40,19 @@ const CountdownContainer = ({
         border: 0
       }
     })}>
-      {showDays && <CountNumber 
+      {!hideDays && <CountNumber 
         value={addPadding(isOver ? 0 : remainingDays)}
         label={daysLabel}
       />}
-      {showHours && <CountNumber 
+      {!hideHours && <CountNumber 
         value={addPadding(isOver ? 0 : remainingHours)}
         label={hoursLabel}
       />}
-      {showMinutes && <CountNumber 
+      {!hideMinutes && <CountNumber 
         value={addPadding(isOver ? 0 : remainingMinutes)}
         label={minutesLabel}
       />}
-      {showSeconds && <CountNumber 
+      {!hideSeconds && <CountNumber 
         value={addPadding(isOver ? 0 : remainingSeconds)}
         label={secondsLabel}
       />}

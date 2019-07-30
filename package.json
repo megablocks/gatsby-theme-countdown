@@ -9,6 +9,9 @@
   "scripts": {
     "dev:theme-jam": "yarn workspace theme-jam develop",
     "build:theme-jam": "yarn workspace theme-jam build",
-    "dev": "yarn workspace demo develop"
+    "dev:world-cup": "yarn workspace world-cup develop",
+    "build:world-cup": "yarn workspace world-cup build",
+    "dev": "yarn workspace demo develop",
+    "build": "yarn workspace demo build"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "world-cup",
+  "author": "Rafael Quintanilha <rafaelquintanilha@poli.ufrj.br>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@rafaelquintanilha/gatsby-theme-countdown": "*",
+    "gatsby": "^2.13.42",
+    "lodash.merge": "^4.6.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
