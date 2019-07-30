@@ -20,8 +20,22 @@ const GithubLink = ({url}) => (
         opacity: "0.5",
       }
     },
+    "& span": {
+      position: "absolute",
+      display: "block",
+      visibility: "visible",
+      overflow: "hidden",
+      width: "1px",
+      height: "1px",
+      margin: "-1px",
+      border: 0,
+      padding: 0,
+      clipPath: "polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px)",
+      whiteSpace: "nowrap",
+    }
   })}>
     <a href={url}>
+      <span>Go to repository</span>
       <GitHubLogo />
     </a>
   </div>

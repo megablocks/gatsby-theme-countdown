@@ -23,6 +23,7 @@ const CountdownContainer = ({
     remainingMinutes, 
     remainingSeconds 
   } = remainingTime(targetDate, currentDate);
+  console.log(remainingHours)
   return (
     <Flex css={css({
       borderWidth: "1px",

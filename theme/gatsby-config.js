@@ -1,3 +1,6 @@
+const nextYear = new Date().getFullYear() + 1;
+const newYearsEve = `${nextYear}-01-01 00:00:00`;
+
 module.exports = {
   siteMetadata: {
     title: "Gatsby Theme Countdown Example",
@@ -5,7 +8,7 @@ module.exports = {
     description: "Create beautiful countdown pages with Gatsby",
     showGithubButton: true,
     repoUrl: "https://github.com/rafaelquintanilha/gatsby-theme-countdown",
-    targetDate: "2020-01-01 00:00:00",
+    targetDate: newYearsEve,
     showSeconds: true,
     showMinutes: true,
     showHours: true,

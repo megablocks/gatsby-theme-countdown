@@ -5,7 +5,7 @@
  */
 
 // Defining the primary color outside so we can reference it later in the svg
-const PRIMARY_COLOR = "#4682b4";
+const PRIMARY_COLOR = "#A1A6F9";
 
 export default {
   colors: {
