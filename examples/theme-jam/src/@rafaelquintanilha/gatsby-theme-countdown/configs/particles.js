@@ -1,6 +1,6 @@
-import merge from "lodash.merge"
-import params from "@rafaelquintanilha/gatsby-theme-countdown/src/configs/particles"
-import Icon from './gatsby-icon.png'
+import merge from "lodash.merge";
+import params from "@rafaelquintanilha/gatsby-theme-countdown/src/configs/particles";
+import Icon from './gatsby-icon.png';
 
 export default merge({}, params, {
   particles: {
