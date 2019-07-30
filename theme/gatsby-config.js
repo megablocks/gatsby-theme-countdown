@@ -11,7 +11,7 @@ module.exports = {
     showHours: true,
     showDays: true,
     text: {
-      mainHeader: "The Fifa 2022 World Cup will take place in Qatar and start in:",
+      mainHeader: "Countdown to the New Year's Eve:",
       secondaryHeader: "Spread the word!",
       daysLabel: "Days",
       hoursLabel: "Hours",

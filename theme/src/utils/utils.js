@@ -2,10 +2,9 @@ import moment from 'moment';
 
 export const remainingTime = (targetDate, currentDate) => {
   const remainingDays = moment(targetDate).diff(currentDate, 'days');
-  const tomorrow = moment().add(1, 'day').hour(0).minute(0).second(0);
-  const remainingHours = tomorrow.diff(currentDate, 'hours');
-  const remainingMinutes = tomorrow.diff(currentDate, 'minutes') - remainingHours * 60;
-  const remainingSeconds = tomorrow.diff(currentDate, 'seconds') - remainingHours * 60 * 60 - remainingMinutes * 60;
+  const remainingHours = moment(targetDate).diff(currentDate, 'hours') - (24 * remainingDays);
+  const remainingMinutes = moment(targetDate).diff(currentDate, 'minutes') - (24 * 60 * remainingDays) - (60 * remainingHours);
+  const remainingSeconds = moment(targetDate).diff(currentDate, 'seconds') % 60;
   return { remainingDays, remainingHours, remainingMinutes, remainingSeconds };
 }
 
