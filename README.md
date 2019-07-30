@@ -43,7 +43,7 @@ module.exports = {
 }
 ```
 
-Then run `yarn dev` and go to http://localhost:8000/countdown to see your countdown working 🎉
+Then run `yarn develop` and go to http://localhost:8000/countdown to see your countdown working 🎉
 
 ## Options
 
