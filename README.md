@@ -34,6 +34,7 @@ module.exports = {
     {
       resolve: "@rafaelquintanilha/gatsby-theme-countdown",
       options: {
+        basePath: "/countdown",
         mainHeader: "My countdown will end in:",
         targetDate: "2020-04-28 00:00:00",
       }
@@ -41,6 +42,8 @@ module.exports = {
   ],
 }
 ```
+
+Then run `yarn dev` and go to http://localhost:8000/countdown to see your countdown working 🎉
 
 ## Options
 
