@@ -24,5 +24,9 @@ export default merge({}, theme, {
     Footer: {
       height: "15vh"
     },
+    Container: {
+      backgroundColor: "#fff",
+      opacity: 0.5
+    }
   }
 })
