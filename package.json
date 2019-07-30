@@ -1,8 +1,14 @@
 {
   "private": true,
+  "author": "Rafael Quintanilha <rafaelquintanilha@poli.ufrj.br>",
   "workspaces": [
     "theme",
     "demo",
     "examples/*"
-  ]
+  ],
+  "scripts": {
+    "dev:theme-jam": "yarn workspace theme-jam develop",
+    "build:theme-jam": "yarn workspace theme-jam build",
+    "dev": "yarn workspace demo develop"
+  }
 }
