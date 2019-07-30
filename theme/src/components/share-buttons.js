@@ -7,7 +7,7 @@ import {
 } from 'react-share';
 import config from '../configs/share-buttons';
 
-const URL = window.location.href;
+const URL = typeof window !== "undefined" ? window.location.href : '';
 
 const ShareButtons = ({ 
   title, 
