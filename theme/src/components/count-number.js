@@ -19,7 +19,8 @@ const CountNumber = ({ value, label }) => (
     "& > div:first-of-type": {
       fontSize: [7, 7, 8],
       fontWeight: 'bold',
-      lineHeight: 1
+      lineHeight: 1,
+      fontFeatureSettings: '"tnum"'
     },
     "& > div:last-child": {
       fontSize: [0, 0, 1],
