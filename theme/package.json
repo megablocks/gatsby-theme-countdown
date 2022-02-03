@@ -30,7 +30,7 @@
     "react-particles-js": "^2.7.0",
     "react-share": "^3.0.0",
     "theme-ui": "^0.2.2",
-    "use-clock": "^1.2.0"
+    "use-clock": "^1.1.0"
   },
   "keywords": [
     "gatsby",
