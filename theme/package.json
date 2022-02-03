@@ -11,13 +11,13 @@
   "license": "MIT",
   "peerDependencies": {
     "gatsby": "^2.13.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "gatsby": "^2.13.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
