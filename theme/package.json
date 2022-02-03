@@ -11,13 +11,13 @@
   "license": "MIT",
   "peerDependencies": {
     "gatsby": "^2.13.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
     "gatsby": "^2.13.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
@@ -30,7 +30,7 @@
     "react-particles-js": "^2.7.0",
     "react-share": "^3.0.0",
     "theme-ui": "^0.2.2",
-    "use-clock": "^1.1.0"
+    "use-clock": "^1.2.0"
   },
   "keywords": [
     "gatsby",
