@@ -1,18 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Theme Countdown Example",
-    author: "Rafael Quintanilha",
-    description: "Create beautiful countdown pages with Gatsby",
-    image: '/rq-logo-square.png',
+    title: "My Countdown",
+    author: "Rafael Quintanilha"
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: "@rafaelquintanilha/gatsby-theme-countdown",
       options: {
-        rule: {
-          include: /assets/
-        }
+        basePath: "/countdown",
+        mainHeader: "My countdown will end in:",
+        targetDate: "2020-04-28 00:00:00",
       }
     }
   ],
