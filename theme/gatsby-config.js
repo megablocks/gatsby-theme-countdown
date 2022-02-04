@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "@rafaelquintanilha/gatsby-theme-countdown",
+      resolve: "@megablocks/gatsby-theme-countdown",
       options: {
         basePath: "/",
       }
